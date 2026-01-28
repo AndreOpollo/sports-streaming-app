@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Background colors */
+  --color-dark: #0a0a0a;
+  --color-dark-secondary: #141414;
+  --color-dark-tertiary: #1f1f1f;
+  
+  /* Text colors */
+  --color-gray-light: #b3b3b3;
+  --color-gray-dark: #7a7a7a;
+  
+  /* Accent colors */
+  --color-cyan: #00e5ff;
+  --color-green: #1db954;
+  
+  /* Status colors */
+  --color-live-red: #ff1744;
+  --color-upcoming-blue: #2196f3;
+  --color-finished-gray: #616161;
+  
+  /* Font family */
+  --font-family-sans: 'Inter', sans-serif;
+  
+  /* Box shadows */
+  --shadow-glow-cyan: 0 0 20px rgba(0, 229, 255, 0.3);
+  --shadow-glow-red: 0 0 20px rgba(255, 23, 68, 0.4);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-dark);
+  color: white;
+}
+
+/* Custom animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.live-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
