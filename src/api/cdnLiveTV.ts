@@ -10,8 +10,8 @@ export const cdnLiveTVAPI = {
         if(!response.ok){
             throw new Error('Failed to fetch events')
         }
-
-        return response.json()
+        const data =  await response.json()
+        return data
     },
 
     fetchChannels:async():Promise<ChannelsResponse> =>{
@@ -19,8 +19,10 @@ export const cdnLiveTVAPI = {
         if(!response.ok){
             throw new Error('Failed to fetch channels')
         }
-
-        return response.json()
+        
+        const data =  await response.json()
+        console.log(data)
+        return data
          
     },
 
@@ -30,6 +32,7 @@ export const cdnLiveTVAPI = {
         if(!response.ok){
             throw new Error(`Failed to fetch ${sport} events`)
         }
-        return response.json()
+         const data =  await response.json()
+        return data
     }
 }

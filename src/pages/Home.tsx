@@ -14,7 +14,7 @@ export default function Home(){
     if(error){
         return(
             <div className="flex items-center justify-center min-h-screen">
-                <div className="text-red-500 text-xl">Error loading events</div>
+                <div className="text-red-500 text-xl">Error:{error.message}</div>
             </div>
         )
     }

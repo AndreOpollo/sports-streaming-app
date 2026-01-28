@@ -11,8 +11,10 @@ export const useEvents = () =>{
             const events: Event[] = []
 
             if(data['cdn-live-tv']){
+                
                 Object.entries(data['cdn-live-tv']).forEach(([sport,games])=>{
-                    games.forEach((game)=>{
+                    const gamesArray = Array.isArray(games)? games: Object.values(games as Record<string, any>)
+                    gamesArray.forEach((game)=>{
                         events.push({
                             ...game,
                             sport
