@@ -1,13 +1,17 @@
 
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 
 function App() {
-  
-
   return (
-    <div className='bg-live-red'>
-      <p>Hello</p>
-    </div>
+    <Router>
+      <div className='min-h-screen bg-dark'>
+        <Routes>
+          <Route path='/'/>
+          <Route path='/channels'/>
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
