@@ -1,33 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  /* Background colors */
-  --color-dark: #0a0a0a;
-  --color-dark-secondary: #141414;
-  --color-dark-tertiary: #1f1f1f;
+  /* Colors */
+  --color-primary: #0d59f2;
+  --color-background-light: #f5f6f8;
+  --color-background-dark: #101622;
+  --color-card-dark: #1b2331;
+  --color-live-red: #ef4444;
+  --color-offline-gray: #64748b;
+  --color-text-muted: #9ca6ba;
+  --color-input-bg: #282e39;
   
-  /* Text colors */
-  --color-gray-light: #b3b3b3;
-  --color-gray-dark: #7a7a7a;
+  /* Font Family */
+  --font-family-display: 'Lexend', sans-serif;
   
-  /* Accent colors */
-  --color-cyan: #00e5ff;
-  --color-green: #1db954;
-  
-  /* Status colors */
-  --color-live-red: #ff1744;
-  --color-upcoming-blue: #2196f3;
-  --color-finished-gray: #616161;
-  
-  /* Font family */
-  --font-family-sans: 'Inter', sans-serif;
-  
-  /* Box shadows */
-  --shadow-glow-cyan: 0 0 20px rgba(0, 229, 255, 0.3);
-  --shadow-glow-red: 0 0 20px rgba(255, 23, 68, 0.4);
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
 }
 
 * {
@@ -37,23 +34,37 @@
 }
 
 body {
-  font-family: var(--font-family-sans);
-  background-color: var(--color-dark);
+  font-family: var(--font-family-display);
+  background-color: var(--color-background-dark);
   color: white;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
 }
 
-/* Custom animations */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
+/* Material Symbols Icons */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
-.live-pulse {
-  animation: pulse 2s ease-in-out infinite;
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

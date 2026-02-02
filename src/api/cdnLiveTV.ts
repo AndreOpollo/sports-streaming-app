@@ -11,6 +11,7 @@ export const cdnLiveTVAPI = {
             throw new Error('Failed to fetch events')
         }
         const data =  await response.json()
+        console.log(data)
         return data
     },
 
